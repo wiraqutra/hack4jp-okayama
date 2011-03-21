@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+/* ========================================
+	CSS初期化
+======================================== */
+
+/* 領域 */
+body,div,pre,p,blockquote,
+form,fieldset,input,textarea,select,option,
+dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,
+table,th,td,embed,object {
+	margin:0px; padding:0px; vertical-align:baseline; font-size:1.0em;
+	font-style:normal; font-weight:normal; 
+}
+
+/* 見出し */
+h1,h2,h3,h4,h5,h6 {
+	font-style:normal; font-weight:normal; font-size:1.0em;
+}
+
+/* リスト */
+ul,ol { list-style-type: none; }
+
+/* フォント基準 */
+body { color:#333333; font-size:75%; /* 14px */
+		line-height:150%; }
+table { border-collapse:collapse; }
+
+/* 画像 */
+img { border:none; }
+
+/* リンク */
+a        { text-decoration:underline; }
+a:link   { color:#b7009b; }
+a:visited{ color:#b7009b; }
+a:hover  { color:#cbcd00; }
+
+
+/* ========================================
+	特殊設定
+======================================== */
+
+/* 背景画像に対して文字をフィルタ扱い */
+.fir { text-indent:-9999px; }
+
+/* clearfixハック */
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+.clearfix { display: inline-block; }
+	/* exlude MacIE5 */
+	* html .clearfix { height: 1% }
+	.clearfix {display:block;}
+	/* end MacIE5 */
+
+.wrap { position:relative; }
+
+
+/* ========================================
+	共通設定
+======================================== */
+.fl_left  { display:inline; float:left; }
+.fl_right { display:inline; float:right; }
+
+.pos_ac { text-align:center; }
+.pos_al { text-align:left; }
+.pos_ar { text-align:right; }
+
+.pos_vt { vertical-align:top; }
+.pos_vm { vertical-align:middle; }
+.pos_vb { vertical-align:bottom; }
+
+.c_red  { color:#cc0000; }
+.c_gray { color:#999999; }
+
+.w50  { width: 50px; }
+.w100 { width:100px; }
+.w200 { width:200px; }
+.w250 { width:250px; }
+.w300 { width:300px; }
+.w350 { width:350px; }
+
