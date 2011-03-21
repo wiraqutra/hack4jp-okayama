@@ -1,0 +1,29 @@
+
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+#map .foot {
+  font-size: 11px;
+  margin-bottom: 1px;
+}
+
+#map .foot a,
+#map .foot a:link,
+#map .foot a:visited {
+  color: #33c;
+}

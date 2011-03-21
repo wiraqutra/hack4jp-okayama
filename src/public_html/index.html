@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta http-equiv="content-style-type" content="text/css" />
+<title>test</title>
+<link rel="stylesheet" href="common/css/import.css" type="text/css" media="screen,print" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+function setup(){
+	var myLatlng = new google.maps.LatLng(34.669209, 133.916125);
+	
+	map = new google.maps.Map(document.getElementById('map_canvas'), {
+		center: myLatlng,
+		zoom: 10,
+		mapTypeId: 'roadmap'
+	});
+	
+	layer = new google.maps.FusionTablesLayer(598952);
+	layer.setMap(map);
+}
+$(function(){
+	var defaultc = '#999999';
+	var focusc = '#333333';
+
+	$('textarea,input[type="text"]').css('color',defaultc).focus(function(){
+		if($(this).val() == this.defaultValue){
+			$(this).val('').css('color', focusc);
+		}
+	})
+	.blur(function(){
+		if($(this).val() == this.defaultValue | $(this).val() == ''){
+			$(this).val(this.defaultValue).css('color',defaultc);
+		};
+	});
+});
+</script>
+</head>
+<body onload="setup()" id="map">
+<div id="base">
+<div id="map_canvas"></div>
+<div id="header" class="clearfix">
+	<h1><a href="./"><img src="common/image/h1.jpg" alt="" /></a></h1>
+	<div id="search">
+		｜ <a href="./">トップページ</a> ｜ <a href="./">このサイトについて</a> ｜ <a href="./">新規投稿</a> ｜
+		<form method="get" action="./" name="search_form">
+			<input type="text" name="search_ford" value="住所など" />
+			<input type="submit" value="検索" />
+		</form>
+	</div>
+</div>
+</body>
+</html>
