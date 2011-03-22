@@ -17,7 +17,7 @@ function setup(){
 	map = new google.maps.Map(document.getElementById('map_canvas'), {
 		center: myLatlng,
 		zoom: 10,
-		mapTypeId: 'roadmap'
+		mapTypeId: google.maps.MapTypeId.ROADMAP
 	});
 	
 	layer = new google.maps.FusionTablesLayer(598952);
@@ -40,7 +40,7 @@ $(function(){
 });
 </script>
 </head>
-<body onload="setup()" id="map">
+<body onload="setup();" id="map">
 <div id="base">
 <div id="map_canvas"></div>
 <div id="header" class="clearfix">
